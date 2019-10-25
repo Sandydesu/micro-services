@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+  details:
+    build: ./Details
+    container_name: Details
+    ports:
+      - "3001:3001"
+    depends_on:
+      - db
+    environment:
+      - MONGODB_URL=mongodb://db/product
+  users:
+    build: ./Users
+    container_name: Details
+    ports:
+      - "3003:3003"
+    depends_on:
+      - db
+    environment:
+      - MONGODB_URL=mongodb://db/product 
+  item:
+    build: ./Item
+    container_name: Item
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - MONGODB_URL=mongodb://db/product 
+  product:
+    build: ./Product
+    container_name: Product
+    depends_on:
+      - details
+      - item
+    ports:
+      - "3002:3002"
+    environment:
+      - DETAILS_URL=details
+      - ITEMS_URL=item
+  db:
+    image: mongo
+    container_name: "db"
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data/db:/data/db
+  nginx: 
+    image: nginx:latest
+    container_name: development_nginx
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 8080:8080
+    depends_on:
+      - details
+      - item
+      - product
