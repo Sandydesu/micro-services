@@ -15,6 +15,11 @@ const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3002;
  * Adding middlewares 
  */
 app.use(bodyParser.json());
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, x-access-token, Content-Type, Accept");
+  next();
+});
 
 /**
  * Declaring routes

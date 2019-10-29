@@ -10,7 +10,11 @@ const url = process.env.MONGODB_URL ? process.env.MONGODB_URL : 'mongodb://local
 /**
  * Database connection
  */
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+.catch(err => { 
+  console.error('App starting error:', err.stack);
+  process.exit(1);
+});
 
 /**
  * Global variable declaration
@@ -22,6 +26,11 @@ const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
  * Adding middlewares 
  */
 app.use(bodyParser.json());
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, x-access-token, Content-Type, Accept");
+  next();
+});
 
 /**
  * Declaring routes

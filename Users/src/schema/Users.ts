@@ -6,6 +6,7 @@ const UserModelSchema = mongoose.model('users', new Schema({
     name: String,
     age: Number,
     phone_number: Number,
-    active: { type: Boolean, default: false }
+    active: { type: Boolean, default: true },
+    role: { type: String, default: 'customer' }
 }));
 export default UserModelSchema;

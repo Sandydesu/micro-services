@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "af7be65c-2ddd-4aeb-971a-4112a8739d88",
+		"name": "docker-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\" : \"sandeepdesu34@gmail.com\",\n    \"password\" : \"Excellence@123\",\n    \"name\" : \"sandeep\",\n    \"age\" : 27,\n    \"phone_number\" : 9492301208,\n    \"role\":\"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_name\" : \"sandeepdesu34@gmail.com\",\n    \"password\" : \"Excellence@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJhY3RpdmUiOnRydWUsInJvbGUiOiJhZG1pbiIsIl9pZCI6IjVkYjgxZmUxNDk5Mjg0NzU0OGUwODFjNyIsInVzZXJfbmFtZSI6InNhbmRlZXBkZXN1MzRAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxNmEyMTc0YWEwMDk5MDQ3YWFlZmQ2Mzg1MzUxNmQ3YyIsIm5hbWUiOiJzYW5kZWVwIiwiYWdlIjoyNywicGhvbmVfbnVtYmVyIjo5NDkyMzAxMjA4LCJfX3YiOjB9.VSMZV80o3qXK2q1DIANPtIq4s-kqnOHfe_5K4VRGetI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\": \"Apple\",\n    \"model\": \"iPhone 7\",\n    \"discription\": \"Take your iPhone experience to the next level with iPhone 7. Featuring new camera systems, a better battery-life, an efficient processor and powerful stereo speakers, this smartphone will drastically enhance your iPhone experience. With a sharp and vibrant display, and a sleek water-resistant body, this phone is as powerful as it is attractive\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/item",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/details",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJhY3RpdmUiOnRydWUsInJvbGUiOiJhZG1pbiIsIl9pZCI6IjVkYjgxZmUxNDk5Mjg0NzU0OGUwODFjNyIsInVzZXJfbmFtZSI6InNhbmRlZXBkZXN1MzRAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxNmEyMTc0YWEwMDk5MDQ3YWFlZmQ2Mzg1MzUxNmQ3YyIsIm5hbWUiOiJzYW5kZWVwIiwiYWdlIjoyNywicGhvbmVfbnVtYmVyIjo5NDkyMzAxMjA4LCJfX3YiOjB9.VSMZV80o3qXK2q1DIANPtIq4s-kqnOHfe_5K4VRGetI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"product_id\": \"5db820dd2e58c31b7bec3c64\",\n    \"currency\": 26999,\n    \"currency_type\": \"INR\",\n    \"color\": \"black\",\n    \"ram_size\": 2,\n    \"ram_units\": \"GB\",\n    \"storage\": 32,\n    \"storage_units\": \"GB\",\n    \"highlights\": [\"32 GB ROM |\",\"11.94 cm (4.7 inch) Retina HD Display\",\"12MP Rear Camera | 7MP Front Camera\",\"Apple A10 Fusion 64-bit processor and Embedded M10 Motion Co-processor\",\"iOS 13 Compatible\"],\n    \"available\": true,\n    \"image\":\"https://rukminim1.flixcart.com/image/832/832/k12go7k0/mobile/7/e/e/apple-iphone-7-mn8x2hn-a-original-imafkqcqhzxuvcpd.jpeg?q=70\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/details",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

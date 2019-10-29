@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "9f557c45-abce-45a5-b1bf-5279c1cc3051",
+		"name": "Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3002/product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/product",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3002/product/5db8199f71362a2ddf548161",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/product/5db8199f71362a2ddf548161",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"product",
+						"5db8199f71362a2ddf548161"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

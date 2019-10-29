@@ -53,7 +53,6 @@ export class UserController {
             }
             res.status(201).send({ message: "Successfully removed" });
         });
-
     }
 
     login(req, res) {

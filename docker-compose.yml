@@ -1,59 +1,78 @@
 version: '3'
 
 services:
-  details:
-    build: ./Details
-    container_name: Details
-    ports:
-      - "3001:3001"
-    depends_on:
-      - db
-    environment:
-      - MONGODB_URL=mongodb://db/product
-  users:
-    build: ./Users
-    container_name: Details
-    ports:
-      - "3003:3003"
-    depends_on:
-      - db
-    environment:
-      - MONGODB_URL=mongodb://db/product 
   item:
     build: ./Item
     container_name: Item
+    restart: on-failure
     ports:
       - "3000:3000"
     depends_on:
       - db
+      - sharedserviceers
     environment:
       - MONGODB_URL=mongodb://db/product 
+      - SHARED_SERVICE_URL=sharedserviceers
+  details:
+    build: ./Details
+    container_name: Details
+    restart: on-failure
+    ports:
+      - "3001:3001"
+    depends_on:
+      - db
+      - sharedserviceers
+    environment:
+      - MONGODB_URL=mongodb://db/product
+      - SHARED_SERVICE_URL=sharedserviceers
   product:
     build: ./Product
     container_name: Product
+    restart: on-failure
     depends_on:
       - details
       - item
+      - sharedserviceers
     ports:
       - "3002:3002"
     environment:
       - DETAILS_URL=details
       - ITEMS_URL=item
-  db:
-    image: mongo
-    container_name: "db"
+      - SHARED_SERVICE_URL=sharedserviceers
+  users:
+    build: ./Users
+    container_name: Users
+    restart: on-failure
     ports:
-      - 27017:27017
-    volumes:
-      - ./data/db:/data/db
+      - "3003:3003"
+    depends_on:
+      - db
+      - sharedserviceers
+    environment:
+      - MONGODB_URL=mongodb://db/product
+      - SHARED_SERVICE_URL=sharedserviceers
+  sharedserviceers:
+    build: ./SharedService
+    container_name: SharedService
+    restart: on-failure
+    ports:
+      - "3004:3004"
   nginx: 
     image: nginx:latest
     container_name: development_nginx
+    restart: on-failure
     volumes:
       - ./default.conf:/etc/nginx/conf.d/default.conf
     ports:
-      - 8080:8080
+      - "8080:8080"
     depends_on:
       - details
       - item
       - product
+      - users
+      - sharedserviceers
+  db:
+    image: mongo
+    container_name: "db"
+    ports:
+      - "27017:27017"

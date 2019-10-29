@@ -10,6 +10,7 @@ const DetailsModelSchema = mongoose.model('itemdetails', new Schema({
     storage: Number,
     storage_units: String,
     highlights: new Array(),
-    available: Boolean
+    available: Boolean,
+    image:String
 }));
 export default DetailsModelSchema;

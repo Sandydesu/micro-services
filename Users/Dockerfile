@@ -3,7 +3,7 @@ FROM node:12-alpine
 #Author info
 MAINTAINER Sandeep Desu < sandeepdesu34@gmail.com >
 
-ENV PORT="3001"
+ENV PORT="3003"
 
 RUN mkdir -p Users
 

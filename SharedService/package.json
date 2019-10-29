@@ -1,5 +1,5 @@
 {
-  "name": "users",
+  "name": "shared-service",
   "version": "1.0.0",
   "description": "",
   "main": "dist/app.js",
@@ -21,8 +21,6 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "md5": "^2.2.1",
-    "mongoose": "^5.7.5",
-    "request": "^2.88.0"
+    "jsonwebtoken": "^8.5.1"
   }
 }

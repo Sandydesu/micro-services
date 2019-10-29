@@ -1,6 +1,7 @@
 import UserModelSchema from '../schema/Users';
+import { JsonTokenWrapper } from '../utils/MiddleWare';
 import md5 from 'md5';
-import jwt from 'jsonwebtoken';
+
 export class UsersModel {
     private UserSchema = UserModelSchema;
     get(params = {}, callback) {
@@ -32,8 +33,13 @@ export class UsersModel {
             } else {
                 if (user) {
                     if (user.password === md5(data.password)) {
-                        jwt.sign(JSON.stringify(user), 'sandy', function (err, token) {
-                            callback(err, { message: "sucess", token: token });
+                        const jsonTokenWrapper = new JsonTokenWrapper();
+                        jsonTokenWrapper.getToken(user, function (err, success) {
+                            if (err) {
+                                callback(err, null);
+                            } else {
+                                callback(null, JSON.parse(success.body));
+                            }
                         });
                     } else {
                         callback(null, { message: 'Password Incorerect' });
@@ -41,7 +47,6 @@ export class UsersModel {
                 } else {
                     callback(null, { message: "Your are not registred or your account is deactivated" });
                 }
-
             }
         });
     }

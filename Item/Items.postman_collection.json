@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "5d937934-1d70-42d6-afbb-2d0d65872a04",
+		"name": "Items",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJhY3RpdmUiOnRydWUsInJvbGUiOiJhZG1pbiIsIl9pZCI6IjVkYjgxNGU0ZDRlNjEzMzBmYmFmYTU1NCIsInVzZXJfbmFtZSI6InNhbmRlZXBkZXN1MzRAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxNmEyMTc0YWEwMDk5MDQ3YWFlZmQ2Mzg1MzUxNmQ3YyIsIm5hbWUiOiJzYW5kZWVwIiwiYWdlIjoyNywicGhvbmVfbnVtYmVyIjo5NDkyMzAxMjA4LCJfX3YiOjB9.K9RBc2svgogg4Jpq-azn1vsAd4ULpna5Sa_NBhmPn6w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"name\": \"Apple\",\n    \"model\": \"iPhone 7\",\n    \"discription\": \"Take your iPhone experience to the next level with iPhone 7. Featuring new camera systems, a better battery-life, an efficient processor and powerful stereo speakers, this smartphone will drastically enhance your iPhone experience. With a sharp and vibrant display, and a sleek water-resistant body, this phone is as powerful as it is attractive\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/item",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/item",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJhY3RpdmUiOnRydWUsInJvbGUiOiJhZG1pbiIsIl9pZCI6IjVkYjgxNGU0ZDRlNjEzMzBmYmFmYTU1NCIsInVzZXJfbmFtZSI6InNhbmRlZXBkZXN1MzRAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxNmEyMTc0YWEwMDk5MDQ3YWFlZmQ2Mzg1MzUxNmQ3YyIsIm5hbWUiOiJzYW5kZWVwIiwiYWdlIjoyNywicGhvbmVfbnVtYmVyIjo5NDkyMzAxMjA4LCJfX3YiOjB9.K9RBc2svgogg4Jpq-azn1vsAd4ULpna5Sa_NBhmPn6w",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"name\": \"Apple\",\n    \"model\": \"iPhone 7\",\n    \"discription\": \"Take your iPhone experience to the next level with iPhone 7. Featuring new camera systems, a better battery-life, an efficient processor and powerful stereo speakers, this smartphone will drastically enhance your iPhone experience. With a sharp and vibrant display, and a sleek water-resistant body, this phone is as powerful as it is attractive\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/item",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/item/5db81717cfcf2c2e848ff6a0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJhY3RpdmUiOnRydWUsInJvbGUiOiJhZG1pbiIsIl9pZCI6IjVkYjgxNGU0ZDRlNjEzMzBmYmFmYTU1NCIsInVzZXJfbmFtZSI6InNhbmRlZXBkZXN1MzRAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxNmEyMTc0YWEwMDk5MDQ3YWFlZmQ2Mzg1MzUxNmQ3YyIsIm5hbWUiOiJzYW5kZWVwIiwiYWdlIjoyNywicGhvbmVfbnVtYmVyIjo5NDkyMzAxMjA4LCJfX3YiOjB9.K9RBc2svgogg4Jpq-azn1vsAd4ULpna5Sa_NBhmPn6w",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"name\": \"Apple\",\n    \"model\": \"iPhone 7\",\n    \"discription\": \"Take your iPhone experience to the next level with iPhone 7. Featuring new camera systems, a better battery-life, an efficient processor and powerful stereo speakers, this smartphone will drastically enhance your iPhone experience. With a sharp and vibrant display, and a sleek water-resistant body, this phone is as powerful as it is attractive\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/item/5db81717cfcf2c2e848ff6a0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"item",
+						"5db81717cfcf2c2e848ff6a0"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

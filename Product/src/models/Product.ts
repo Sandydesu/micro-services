@@ -1,4 +1,4 @@
-import { RequestWrapper } from '../util/RequestWrapper';
+import { RequestWrapper } from '../utils/RequestWrapper';
 import * as _ from 'lodash';
 export class ProductModel {
     get(callback) {

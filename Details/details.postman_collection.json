@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "27a9bc4c-8a92-4bc0-8a89-657d2df9126a",
+		"name": "details",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3001/details",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJhY3RpdmUiOnRydWUsInJvbGUiOiJhZG1pbiIsIl9pZCI6IjVkYjgxNGU0ZDRlNjEzMzBmYmFmYTU1NCIsInVzZXJfbmFtZSI6InNhbmRlZXBkZXN1MzRAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxNmEyMTc0YWEwMDk5MDQ3YWFlZmQ2Mzg1MzUxNmQ3YyIsIm5hbWUiOiJzYW5kZWVwIiwiYWdlIjoyNywicGhvbmVfbnVtYmVyIjo5NDkyMzAxMjA4LCJfX3YiOjB9.K9RBc2svgogg4Jpq-azn1vsAd4ULpna5Sa_NBhmPn6w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"product_id\": \"5db81717cfcf2c2e848ff6a0\",\n    \"currency\": 26999,\n    \"currency_type\": \"INR\",\n    \"color\": \"black\",\n    \"ram_size\": 2,\n    \"ram_units\": \"GB\",\n    \"storage\": 32,\n    \"storage_units\": \"GB\",\n    \"highlights\": [\"32 GB ROM | 11.94 cm (4.7 inch) Retina HD Display\", \"12MP Rear Camera | 7MP Front Camera\", \"Apple A10 Fusion 64-bit processor and Embedded M10 Motion Co-processor iOS 13 Compatible\"],\n    \"available\": true,\n    \"image\":\"https://rukminim1.flixcart.com/image/832/832/k12go7k0/mobile/7/e/e/apple-iphone-7-mn8x2hn-a-original-imafkqcqhzxuvcpd.jpeg?q=70\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/details",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJhY3RpdmUiOnRydWUsInJvbGUiOiJhZG1pbiIsIl9pZCI6IjVkYjgxNGU0ZDRlNjEzMzBmYmFmYTU1NCIsInVzZXJfbmFtZSI6InNhbmRlZXBkZXN1MzRAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxNmEyMTc0YWEwMDk5MDQ3YWFlZmQ2Mzg1MzUxNmQ3YyIsIm5hbWUiOiJzYW5kZWVwIiwiYWdlIjoyNywicGhvbmVfbnVtYmVyIjo5NDkyMzAxMjA4LCJfX3YiOjB9.K9RBc2svgogg4Jpq-azn1vsAd4ULpna5Sa_NBhmPn6w",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"product_id\": \"5db81717cfcf2c2e848ff6a0\",\n    \"currency\": 26999,\n    \"currency_type\": \"INR\",\n    \"color\": \"silver\",\n    \"ram_size\": 2,\n    \"ram_units\": \"GB\",\n    \"storage\": 32,\n    \"storage_units\": \"GB\",\n    \"highlights\": [\"32 GB ROM | 11.94 cm (4.7 inch) Retina HD Display\", \"12MP Rear Camera | 7MP Front Camera\", \"Apple A10 Fusion 64-bit processor and Embedded M10 Motion Co-processor iOS 13 Compatible\"],\n    \"available\": true,\n    \"image\":\"https://rukminim1.flixcart.com/image/832/832/k12go7k0/mobile/7/e/e/apple-iphone-7-mn8x2hn-a-original-imafkqcqhzxuvcpd.jpeg?q=70\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/details",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/details/5db819c271362a2ddf548162",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJhY3RpdmUiOnRydWUsInJvbGUiOiJhZG1pbiIsIl9pZCI6IjVkYjgxNGU0ZDRlNjEzMzBmYmFmYTU1NCIsInVzZXJfbmFtZSI6InNhbmRlZXBkZXN1MzRAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxNmEyMTc0YWEwMDk5MDQ3YWFlZmQ2Mzg1MzUxNmQ3YyIsIm5hbWUiOiJzYW5kZWVwIiwiYWdlIjoyNywicGhvbmVfbnVtYmVyIjo5NDkyMzAxMjA4LCJfX3YiOjB9.K9RBc2svgogg4Jpq-azn1vsAd4ULpna5Sa_NBhmPn6w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"image\":\"https://rukminim1.flixcart.com/image/832/832/k12go7k0/mobile/e/q/m/apple-iphone-7-mn942hn-a-original-imafkqe8mqaafe4g.jpeg?q=70\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/details/5db819c271362a2ddf548162",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"details",
+						"5db819c271362a2ddf548162"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

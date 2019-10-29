@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "8018a62c-d4ea-4a33-9e64-ffcd9692e380",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3003/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"active\" : true,\n    \"user_name\" : \"sandeepdesu34@gmail.com\",\n    \"password\" : \"Excellence@123\",\n    \"name\" : \"sandeep\",\n    \"age\" : 27,\n    \"phone_number\" : 9492301208\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3003/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user"
+					]
+				},
+				"description": "Create Users"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3003/user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3003/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3003/user/5db814e4d4e61330fbafa554",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3003/user/5db814e4d4e61330fbafa554",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"5db814e4d4e61330fbafa554"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3003/user/auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\" : \"sandeepdesu34@gmail.com\",\n    \"password\" : \"Excellence@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3003/user/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3003/user/5db814f8d4e61330fbafa555",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJhY3RpdmUiOnRydWUsInJvbGUiOiJhZG1pbiIsIl9pZCI6IjVkYjgxNGU0ZDRlNjEzMzBmYmFmYTU1NCIsInVzZXJfbmFtZSI6InNhbmRlZXBkZXN1MzRAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxNmEyMTc0YWEwMDk5MDQ3YWFlZmQ2Mzg1MzUxNmQ3YyIsIm5hbWUiOiJzYW5kZWVwIiwiYWdlIjoyNywicGhvbmVfbnVtYmVyIjo5NDkyMzAxMjA4LCJfX3YiOjB9.K9RBc2svgogg4Jpq-azn1vsAd4ULpna5Sa_NBhmPn6w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"active\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3003/user/5db814f8d4e61330fbafa555",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"5db814f8d4e61330fbafa555"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
